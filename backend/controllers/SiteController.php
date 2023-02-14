@@ -5,7 +5,7 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use backend\models\LoginForm;
 
 /**
  * Site controller
@@ -15,6 +15,8 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+	 
+	public $layout = "newlayout";
     public function behaviors()
     {
         return [

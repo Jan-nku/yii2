@@ -727,7 +727,7 @@
             "time": "2020-01-21T22:29:38+00:00"
         },
         {
-            "name": "yiisoft/yii2-bootstrap",
+            "name": "yiisoft/yii2-",
             "version": "2.0.10",
             "source": {
                 "type": "git",

@@ -1,4 +1,10 @@
 <?php
+/**
+ * Team: RollRollTeam
+ * Coding by 许健 2013018
+ * frontend布局修改
+ */
+
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -29,20 +35,23 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => '俄乌冲突新闻网',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => '新闻索引', 'url' => ['/news/index']],
+        ['label' => '重大事件', 'url' => ['/important/index']],
+        ['label' => '国际援助', 'url' => ['/help/index']],
+        ['label' => '军事力量比对', 'url' => ['/military-comparison/index']],
+        ['label' => '关于我们', 'url' => ['/site/about']],
+        ['label' => '联系', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
@@ -69,13 +78,7 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

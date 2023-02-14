@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: RollRollTeam
+ * Coding by 许健 2013018
+ * 注册页面，增加重复密码和验证码
+ */
+
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\SignupForm */

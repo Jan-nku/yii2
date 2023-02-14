@@ -1,6 +1,13 @@
 <?php
 namespace frontend\controllers;
 
+/**
+ * Team: RollRollTeam
+ * Coding by 许健 2013018
+ * 修改一些页面布局，前后台分离
+ */
+
+
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -9,7 +16,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use frontend\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -23,6 +30,7 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+    //public $layout = "main_layout";
     public function behaviors()
     {
         return [
@@ -142,6 +150,7 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        $this->layout = "main_layout";
         return $this->render('about');
     }
 
